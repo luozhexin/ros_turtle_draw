@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node"/>
+    <arg name="x" default="1"/>
+    <!-- <arg name="theta" default="90"/> -->
+    <!-- <rosparam file="$(find turtlespwan)/config/para.yaml" command="load"/> -->
+    <node pkg="turtlespwan" type="turtle_spwan" name="turtle_spwan" args="$(arg x) "/>
+    <!-- <node pkg="turtlespwan" type="turtle_spwan" name="turtle_spwan" /> -->
+
+
+
+
+    <!-- <node pkg="turtlespwan" type="turtle_topic" name="turtle_topic" output="screen"/> -->
+    <!-- <node pkg="turtlespwan" type="turtle_control" name="turtle_control"/> -->
+
+</launch>
