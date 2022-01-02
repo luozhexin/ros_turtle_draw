@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="turtlesim" name="turtlesim_node" type="turtlesim_node"/>
+
+    <node pkg="turtlespwan" name="turtle_action_client" type="turtlemove_client"  output="screen"/>
+    <node pkg="turtlespwan" name="turtle_action_server" type="turtlemove_server"/>
+</launch>

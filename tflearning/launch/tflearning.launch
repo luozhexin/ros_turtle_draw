@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
+
+    <node pkg="tflearning" type="broadcaster" name="turtle1_broadcaster" args="/turtle1" />
+    <node pkg="tflearning" type="broadcaster" name="turtle2_broadcaster" args="/turtle2" />
+
+    <node pkg="tflearning" type="tflistener" name="listener"/>
+
+</launch>
