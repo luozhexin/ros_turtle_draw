@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot name="mbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find mrobot_description)/xacro/mrobot_base.xacro" />
+
+    <mbot_base/>
+</robot>
