@@ -49,10 +49,10 @@
             </visual>
         </link>
 
-        <motor prefix="left" reflect="-1"/>
-        <motor prefix="right" reflect="1"/>
-        <wheel prefix="left" reflect="-1"/>
-        <wheel prefix="right" reflect="1"/>
+        <motor prefix="l" reflect="-1"/>
+        <motor prefix="r" reflect="1"/>
+        <wheel prefix="l" reflect="-1"/>
+        <wheel prefix="r" reflect="1"/>
         <caster prefix="front" reflect="-1"/>
         <caster prefix="back" reflect="1"/>
 
@@ -81,7 +81,7 @@
     </xacro:macro>
     <!-- Macro for robot wheel -->
     <xacro:macro name="wheel" params="prefix reflect">
-        <joint name="${prefix}_wheel_joint" type="continuous">
+        <joint name="base_${prefix}_wheel_joint" type="continuous">
             <origin xyz="0 ${reflect*motor_length/2} 0" rpy="0 0 0"/>
             <parent link="${prefix}_motor_link"/>
             <child link="${prefix}_wheel_link"/>
